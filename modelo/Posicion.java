@@ -7,6 +7,12 @@ public class Posicion {
 
     private char columna;
 
+    public Posicion(int fila, char columna)
+    {
+        setFila(fila);
+        setColumna(columna);
+    }
+
 
     public int getFila()
     {
@@ -43,6 +49,10 @@ public class Posicion {
         }
 
     }
+
+
+
+
 }
 
 

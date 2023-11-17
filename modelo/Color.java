@@ -7,4 +7,8 @@ public enum Color {
 
     private String cadenaAMostrar;
 
+   Color(String cadenaAMostrar)
+    {
+        this.cadenaAMostrar = cadenaAMostrar;
+    }
 }

@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.Objects;
+
 public class Posicion {
 
 
@@ -56,9 +58,17 @@ public class Posicion {
 
     }
 
+    public boolean equals(Posicion p)
+    {
+        return fila == p.fila && columna == p.columna;
+    }
 
 
-
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(fila, columna);
+    }
 }
 
 

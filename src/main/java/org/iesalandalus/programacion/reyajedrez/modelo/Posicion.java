@@ -1,4 +1,4 @@
-package modelo;
+package org.iesalandalus.programacion.reyajedrez.modelo;
 
 import java.util.Objects;
 

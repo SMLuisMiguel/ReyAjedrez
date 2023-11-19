@@ -1,4 +1,4 @@
-package modelo;
+package org.iesalandalus.programacion.reyajedrez.modelo;
 
 
 //Creacion de clase Enum Color.

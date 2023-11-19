@@ -231,6 +231,14 @@ public class Rey {
         {
             throw new NullPointerException("La direccion introducida no es la correcta");
         }
+
+    }
+
+
+    @Override
+    public String toString()
+    {
+        return "color = "+ color + ", posicion = " + posicion;
     }
 
 }

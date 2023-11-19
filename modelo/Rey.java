@@ -12,6 +12,22 @@ public class Rey {
         posicion=new Posicion(1,'e');
     }
 
+    //Constructor
+    public Rey(Color color)
+    {
+        if (color==Color.BLANCO)
+        {
+            this.color=Color.BLANCO;
+            posicion=new Posicion(1,'e');
+        }
+        else
+        {
+            this.color=Color.NEGRO;
+            posicion=new Posicion(8,'e');
+        }
+
+    }
+
     public Color getColor()
     {
         return color;

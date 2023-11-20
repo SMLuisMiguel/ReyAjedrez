@@ -119,4 +119,16 @@ public class Consola {
         }
 
     }
+
+    //Despedida.
+    public static void despedirse()
+    {
+        System.out.println("Fin de la partida. Adios.");
+    }
+
+
+
+
+
+
 }

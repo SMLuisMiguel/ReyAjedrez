@@ -14,6 +14,7 @@ public class MainApp {
         Color colorElegido= Consola.elegirOpcion();
         Consola.mostrarMenuDirecciones();
         Direccion direccionElegida=Consola.elegirDireccion();
+        Consola.despedirse();
 
 
     }

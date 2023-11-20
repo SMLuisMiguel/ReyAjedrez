@@ -16,7 +16,7 @@ public class MainApp {
                 break;
 
             case 2:
-                //
+                crearReyColor();
                 break;
 
             case 3:
@@ -33,6 +33,12 @@ public class MainApp {
     private static void crearReyDefecto()
     {
         rey= new Rey();
+    }
+
+    private static void crearReyColor()
+    {
+        Color color= Consola.elegirOpcion();
+        rey= new Rey(color);
     }
 
 

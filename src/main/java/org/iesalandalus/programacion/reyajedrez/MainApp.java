@@ -7,7 +7,7 @@ public class MainApp {
 
 
 
-
+        int opcionElegida = Consola.elegirOpcionMenu();
 
 
     }

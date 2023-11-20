@@ -1,5 +1,5 @@
 package org.iesalandalus.programacion.reyajedrez;
-
+import org.iesalandalus.programacion.reyajedrez.modelo.Color;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -33,5 +33,33 @@ public class Consola {
             menu=Entrada.entero();
         }
         return menu;
+
+    }
+    //Crear el menu elegir opcion.
+    public static Color elegirOpcion()
+    {
+
+        int menu;
+
+        System.out.println("Introduzca el color:\n1:BLANCO. \n2:NEGRO.");
+        System.out.println("Introduce un numero");
+        menu= Entrada.entero();
+
+
+        while (menu<1 || menu>2)
+        {
+            System.out.println("Introduce un numero correcto");
+            menu=Entrada.entero();
+        }
+
+        if (menu==1)
+        {
+            return Color.BLANCO;
+        }
+        else
+        {
+            return Color.NEGRO;
+        }
+
     }
 }

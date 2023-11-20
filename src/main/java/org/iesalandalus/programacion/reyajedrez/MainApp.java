@@ -12,7 +12,7 @@ public class MainApp {
         switch (opcion)
         {
             case 1:
-                //
+                crearReyDefecto();
                 break;
 
             case 2:
@@ -28,6 +28,11 @@ public class MainApp {
                 break;
 
         }
+    }
+
+    private static void crearReyDefecto()
+    {
+        rey= new Rey();
     }
 
 

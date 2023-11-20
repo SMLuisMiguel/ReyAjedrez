@@ -11,6 +11,7 @@ public class MainApp {
 
         int opcionElegida = Consola.elegirOpcionMenu();
         Color colorElegido= Consola.elegirOpcion();
+        Consola.mostrarMenuDirecciones();
 
 
     }

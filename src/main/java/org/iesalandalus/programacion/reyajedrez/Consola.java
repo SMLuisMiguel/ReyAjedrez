@@ -62,4 +62,10 @@ public class Consola {
         }
 
     }
+
+    public static void mostrarMenuDirecciones()
+    {
+        System.out.println("1:NORTE. \n2:NORESTE. \n3:ESTE. \n4:SURESTE. \n5:SUR. \n6:SUROESTE. \n7:OESTE. \n8:NOROESTE. \n9:ENROQUE_CORTO. \n10:ENROQUE_LARGO.");
+
+    }
 }

@@ -3,6 +3,8 @@ import org.iesalandalus.programacion.reyajedrez.modelo.Color;
 import org.iesalandalus.programacion.reyajedrez.modelo.Direccion;
 import org.iesalandalus.programacion.reyajedrez.modelo.Rey;
 
+import javax.naming.OperationNotSupportedException;
+
 public class MainApp {
 
     private static Rey rey;
@@ -20,7 +22,7 @@ public class MainApp {
                 break;
 
             case 3:
-                //
+                mover();
                 break;
 
             case 4:
@@ -41,6 +43,27 @@ public class MainApp {
         rey= new Rey(color);
     }
 
+    private static void mover()
+    {
+        if (rey != null)
+        {
+            Consola.mostrarMenuDirecciones();
+            Direccion direccion=Consola.elegirDireccion();
+            try
+            {
+                rey.mover(direccion);
+            }
+            catch (OperationNotSupportedException e)
+            {
+                System.out.println("El movimiento introducido no es posible");
+            }
+        }
+        else
+        {
+            System.out.println("No se puede hacer el movimiento, debe crearse el rey antes");
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -53,9 +76,9 @@ public class MainApp {
 
 
         int opcionElegida = Consola.elegirOpcionMenu();
-        Color colorElegido= Consola.elegirOpcion();
-        Consola.mostrarMenuDirecciones();
-        Direccion direccionElegida=Consola.elegirDireccion();
+        //Color colorElegido= Consola.elegirOpcion();
+        //Consola.mostrarMenuDirecciones();
+        //Direccion direccionElegida=Consola.elegirDireccion();
         Consola.despedirse();
 
 

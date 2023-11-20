@@ -26,7 +26,7 @@ public class MainApp {
                 break;
 
             case 4:
-                //
+                Consola.despedirse();
                 break;
 
         }
@@ -34,13 +34,29 @@ public class MainApp {
 
     private static void crearReyDefecto()
     {
-        rey= new Rey();
+        if (rey == null)
+        {
+            rey= new Rey();
+            mostrarRey();
+        }
+        else
+        {
+            System.out.println("El rey ya existe");
+        }
     }
 
     private static void crearReyColor()
     {
-        Color color= Consola.elegirOpcion();
-        rey= new Rey(color);
+        if (rey == null)
+        {
+            Color color= Consola.elegirOpcion();
+            rey= new Rey(color);
+            mostrarRey();
+        }
+        else
+        {
+            System.out.println("El rey ya existe");
+        }
     }
 
     private static void mover()
@@ -52,10 +68,12 @@ public class MainApp {
             try
             {
                 rey.mover(direccion);
+                mostrarRey();
             }
             catch (OperationNotSupportedException e)
             {
                 System.out.println("El movimiento introducido no es posible");
+                mostrarRey();
             }
         }
         else
@@ -68,6 +86,7 @@ public class MainApp {
     {
         if (rey != null)
         {
+            System.out.println("El rey se encuentra en la siguiente posicion:");
             System.out.println(rey.toString());
         }
         else
@@ -77,21 +96,13 @@ public class MainApp {
     }
 
     public static void main(String[] args) {
-
-
-
-
-
-        Consola.mostrarMenu();
-
-
-
-        int opcionElegida = Consola.elegirOpcionMenu();
-        //Color colorElegido= Consola.elegirOpcion();
-        //Consola.mostrarMenuDirecciones();
-        //Direccion direccionElegida=Consola.elegirDireccion();
-        Consola.despedirse();
-
+        int opcion = 0;
+        while (opcion != 4) {
+            System.out.println("-------------------------------------------");
+            Consola.mostrarMenu();
+            opcion = Consola.elegirOpcionMenu();
+            ejecutarOpcion(opcion);
+        }
 
     }
 }

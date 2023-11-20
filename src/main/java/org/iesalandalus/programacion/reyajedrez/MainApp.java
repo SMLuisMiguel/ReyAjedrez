@@ -5,7 +5,30 @@ import org.iesalandalus.programacion.reyajedrez.modelo.Rey;
 
 public class MainApp {
 
-    private Rey rey;
+    private static Rey rey;
+
+    private static void ejecutarOpcion(int opcion)
+    {
+        switch (opcion)
+        {
+            case 1:
+                //
+                break;
+
+            case 2:
+                //
+                break;
+
+            case 3:
+                //
+                break;
+
+            case 4:
+                //
+                break;
+
+        }
+    }
 
 
     public static void main(String[] args) {

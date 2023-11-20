@@ -64,6 +64,17 @@ public class MainApp {
         }
     }
 
+    private static void mostrarRey()
+    {
+        if (rey != null)
+        {
+            System.out.println(rey.toString());
+        }
+        else
+        {
+            System.out.println("Debe de crearse el rey.");
+        }
+    }
 
     public static void main(String[] args) {
 

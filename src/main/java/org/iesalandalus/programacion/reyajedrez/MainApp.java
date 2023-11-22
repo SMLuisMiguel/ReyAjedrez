@@ -86,7 +86,7 @@ public class MainApp {
     {
         if (rey != null)
         {
-            System.out.println("El rey se encuentra en la siguiente posicion:");
+            System.out.println("El rey se encuentra en la siguiente posición:");
             System.out.println(rey.toString());
         }
         else

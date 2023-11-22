@@ -24,13 +24,13 @@ public class Consola {
     {
         int menu;
 
-        System.out.println("Introduce un numero");
+        System.out.println("Introduce un número");
         menu= Entrada.entero();
 
 
         while (menu<1 || menu>4)
         {
-            System.out.println("Introduce un numero correcto");
+            System.out.println("Introduce un número correcto");
             menu=Entrada.entero();
         }
         return menu;
@@ -43,13 +43,13 @@ public class Consola {
         int menu;
 
         System.out.println("Introduzca el color:\n1:BLANCO. \n2:NEGRO.");
-        System.out.println("Introduce un numero");
+        System.out.println("Introduce un número");
         menu= Entrada.entero();
 
 
         while (menu<1 || menu>2)
         {
-            System.out.println("Introduce un numero correcto");
+            System.out.println("Introduce un número correcto");
             menu=Entrada.entero();
         }
 
@@ -74,13 +74,13 @@ public class Consola {
 
         int menu;
 
-        System.out.println("Introduce un numero");
+        System.out.println("Introduce un número");
         menu= Entrada.entero();
 
 
         while (menu<1 || menu>10)
         {
-            System.out.println("Introduce un numero correcto");
+            System.out.println("Introduce un número correcto");
             menu=Entrada.entero();
         }
 
@@ -123,7 +123,7 @@ public class Consola {
     //Despedida.
     public static void despedirse()
     {
-        System.out.println("Fin de la partida. Adios.");
+        System.out.println("Fin de la partida. Adíos.");
     }
 
 

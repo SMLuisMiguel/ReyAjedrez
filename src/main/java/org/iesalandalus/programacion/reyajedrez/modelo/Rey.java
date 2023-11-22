@@ -62,7 +62,7 @@ public class Rey {
         }
         else
         {
-            throw new NullPointerException("La posicion introducida no es la correcta");
+            throw new NullPointerException("La posición introducida no es la correcta");
         }
     }
 
@@ -71,7 +71,7 @@ public class Rey {
         if (direccion!=null)
         {
             Posicion posicion = getPosicion();
-            OperationNotSupportedException exception = new OperationNotSupportedException("El movimiento no es valido");
+            OperationNotSupportedException exception = new OperationNotSupportedException("El movimiento no es válido");
             switch (direccion)
             {
                 case NORTE:
@@ -229,7 +229,7 @@ public class Rey {
         }
         else
         {
-            throw new NullPointerException("La direccion introducida no es la correcta");
+            throw new NullPointerException("La dirección introducida no es la correcta");
         }
 
     }
@@ -238,7 +238,7 @@ public class Rey {
     @Override
     public String toString()
     {
-        return "color = "+ color + ", posicion = " + posicion;
+        return "Color = "+ color + ", y posición = " + posicion;
     }
 
 }

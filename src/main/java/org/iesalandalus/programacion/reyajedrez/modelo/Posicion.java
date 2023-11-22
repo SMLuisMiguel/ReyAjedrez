@@ -76,7 +76,7 @@ public class Posicion {
     @Override
     public String toString()
     {
-        return "Fila = "+ fila + "y columna = " + columna;
+        return "Fila = "+ fila + " columna = " + columna;
     }
 
 }

@@ -238,7 +238,7 @@ public class Rey {
     @Override
     public String toString()
     {
-        return "Color = "+ color + ", y posición = " + posicion;
+        return "Color = "+ color + ", posición = " + posicion;
     }
 
 }

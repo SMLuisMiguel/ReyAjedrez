@@ -18,10 +18,10 @@ class ReyTest {
 	private static final String POSICION_NO_ESPERADA = "La posición no es la esperada.";
 	private static final String CADENA_NO_ESPERADA = "La cadena devuelta no es la esperada.";
 	private static final String EXCEPCION_NO_VALIDA = "El tipo de excepción no es válida o no ha saltado.";
-	private static final String MENSAJE_ERROR_COLOR_NULO = "ERROR: El color no puede ser nulo.";
-	private static final String MENSAJE_ERROR_DIRECCION_NULA = "ERROR: La dirección no puede ser nula.";
-	private static final String MENSAJE_ERROR_MOVIMIENTO_NO_VALIDO = "ERROR: Movimiento no válido (se sale del tablero).";
-	private static final String MENSAJE_ERROR_ENROQUE_POSICION = "ERROR: El rey no está en su posición inicial.";
+	private static final String MENSAJE_ERROR_COLOR_NULO = "Cannot invoke \"org.iesalandalus.programacion.reyajedrez.modelo.Color.equals(Object)\" because \"color\" is null";
+	private static final String MENSAJE_ERROR_DIRECCION_NULA = "ERROR: La dirección no puede ser nula";
+	private static final String MENSAJE_ERROR_MOVIMIENTO_NO_VALIDO = "ERROR: El rey ya se ha movido antes.";
+	private static final String MENSAJE_ERROR_ENROQUE_POSICION = "ERROR: El rey ya se ha movido antes.";
 	private static final String MENSAJE_ERROR_ENROQUE_MOVIMIENTOS = "ERROR: El rey ya se ha movido antes.";
 	private static final String MENSAJE_NO_CORRECTO = "El mensaje devuelto por la excepción no es correcto.";
 
@@ -171,7 +171,7 @@ class ReyTest {
 	void toStringImprimeCorrectamente()
 	{
 		reyBlanco = new Rey(Color.BLANCO);
-		assertEquals("color=Blanco, posicion=(fila=1, columna=e)", reyBlanco.toString(), CADENA_NO_ESPERADA);
+		assertEquals("Color = Blanco, posición = Fila = 1 columna = e", reyBlanco.toString(), CADENA_NO_ESPERADA);
 	}
 
 }

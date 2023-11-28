@@ -15,7 +15,7 @@ public class Posicion {
         setFila(fila);
         setColumna(columna);
     }
-    //Constructor Copia.
+    //Constructor Copia. AÑADIR PARAMETRO NULL
     public Posicion(Posicion posicion)
     {
         fila = posicion.fila;
@@ -37,7 +37,7 @@ public class Posicion {
         }
         else
         {
-            throw new IllegalArgumentException("La fila introducida no es correcta");
+            throw new IllegalArgumentException("ERROR: fila no válida.");
         }
     }
     //Metodo Getter.
@@ -55,15 +55,26 @@ public class Posicion {
         }
         else
         {
-            throw new IllegalArgumentException("La columna introducida no es correcta.");
+            throw new IllegalArgumentException("ERROR: Columna no válida.");
         }
     }
 
     //Metodo Equals.
-    public boolean equals(Posicion p)
+
+    @Override
+    public boolean equals(Object o)
     {
-        return fila == p.fila && columna == p.columna;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Posicion posicion = (Posicion) o;
+        return fila == posicion.fila && columna == posicion.columna;
     }
+
+
+    //public boolean equals(Posicion p)
+    //{
+      //  return fila == p.fila && columna == p.columna;
+    //}
 
     //Metodo HasCode
     @Override

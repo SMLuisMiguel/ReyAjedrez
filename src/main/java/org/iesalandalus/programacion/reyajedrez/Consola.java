@@ -12,11 +12,9 @@ public class Consola {
 
     }
 
-
     public static void mostrarMenu()
     {
         System.out.println("1: Crear Rey. \n2: Elegir color. \n3: Mover. \n4: Salir.");
-
     }
 
      //Validar menu

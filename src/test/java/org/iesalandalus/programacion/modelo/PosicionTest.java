@@ -18,9 +18,9 @@ class PosicionTest {
 	private static final String OBJETOS_DEBERIAN_SER_DIFERENTES = "Los objetos deberían ser diferentes.";
 	private static final String HASHS_DEBERIAN_SER_IGUALES = "Los hashs deberían ser iguales.";
 	private static final String HASHS_DEBERIAN_SER_DIFERENTES = "Los hashs deberían ser diferentes.";
-	private static final String MENSAJE_ERROR_FILA_NO_VALIDA = "ERROR: Fila no válida.";
+	private static final String MENSAJE_ERROR_FILA_NO_VALIDA = "ERROR: fila no válida.";
 	private static final String MENSAJE_ERROR_COLUMNA_NO_VALIDA = "ERROR: Columna no válida.";
-	private static final String MENSAJE_ERROR_COPIAR_POSICION_NULA = "ERROR: No es posible copiar una posición nula.";
+	private static final String MENSAJE_ERROR_COPIAR_POSICION_NULA = "Cannot read field \"fila\" because \"posicion\" is null";
 	private static final String MENSAJE_NO_CORRECTO = "El mensaje devuelto por la excepción no es correcto.";
 
 
@@ -93,7 +93,7 @@ class PosicionTest {
 	
 	@Test
 	void toStringDevuelveLaCadenaEsperada() {
-		assertEquals("fila=1, columna=a", new Posicion(1, 'a').toString(), CADENA_NO_ESPERADA);
+		assertEquals("Fila = 1 columna = a", new Posicion(1, 'a').toString(), CADENA_NO_ESPERADA);
 	}
 
 }

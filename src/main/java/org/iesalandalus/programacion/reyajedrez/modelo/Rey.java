@@ -19,7 +19,7 @@ public class Rey {
     public Rey(Color color)
     {
         totalMovimientos=0;
-        if (color==Color.BLANCO)
+        if (color.equals(Color.BLANCO))  //MODIFICACION SEGUN TAREA.
         {
             setColor(Color.BLANCO);
             posicion=new Posicion(1,'e');
@@ -49,9 +49,9 @@ public class Rey {
         }
     }
 
-    public Posicion getPosicion()
+    public Posicion getPosicion()  //AÑADIDO THIS SEGUN TAREA.
     {
-        return posicion;
+        return this.posicion;
     }
 
     private void setPosicion(Posicion posicion)
@@ -71,7 +71,7 @@ public class Rey {
         if (direccion!=null)
         {
             Posicion posicion = getPosicion();
-            OperationNotSupportedException exception = new OperationNotSupportedException("El movimiento no es válido");
+            OperationNotSupportedException exception = new OperationNotSupportedException("ERROR: El rey ya se ha movido antes.");
             switch (direccion)
             {
                 case NORTE:
@@ -229,7 +229,7 @@ public class Rey {
         }
         else
         {
-            throw new NullPointerException("La dirección introducida no es la correcta");
+            throw new NullPointerException("ERROR: La dirección no puede ser nula");
         }
 
     }
